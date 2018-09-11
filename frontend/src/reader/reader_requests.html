@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/tables.css" rel="stylesheet">
+	<link rel="import" href="../reader/reader_header.html">
+<title>Запросы читателя</title>
+</head>
+<body class="base_tables">
+<script>
+   var link = document.querySelector('link[rel=import]');
+   var content = link.import.querySelector('#reader_header');
+   document.body.appendChild(content.cloneNode(true));	 
+</script>
+<br>
+<form class="book_request" action="#" method="post" style="overflow-y:auto;">
+<table id="reader_tbl">
+  <tr title="">
+    <th id="book_id">id</th>
+	<th>Название книги</th>
+    <th>Текущий статус</th>
+    
+  </tr>
+  <tr>
+    <td class="id_book">1</td>
+    <td>Властелин колец</td>
+    <td>возврат</td>
+  </tr>
+  <tr>
+    <td class="id_book">2</td>
+    <td>Война и мир том1</td>
+    <td>выдано</td>
+  </tr>
+  <tr>
+    <td class="id_book">3</td>
+    <td>20 тысяч лье под водой</td>
+    <td>обработано</td>
+  </tr>
+  <tr>
+    <td class="id_book">4</td>
+    <td>Евгений Онегин</td>
+    <td>запрос</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

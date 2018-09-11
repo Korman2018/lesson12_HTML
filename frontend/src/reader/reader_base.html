@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/tables.css" rel="stylesheet">
+	<link rel="import" href="../reader/reader_header.html">
+<title>Страница читателя</title>
+</head>
+<body class="base_tables">
+<script>
+   var link = document.querySelector('link[rel=import]');
+   var content = link.import.querySelector('#reader_header');
+   document.body.appendChild(content.cloneNode(true));	 
+</script>
+<br>
+<form class="search_book">
+  <!-- <form action=""> -->
+  <input type="text" name="search_book" placeholder="Поиск..">
+  <input type="radio" name="type" value="по названию" checked> по названию   
+  <input type="radio" name="type" value="по автору"> по автору    
+  <input type="radio" name="type" value="по жанру"> по жанру   
+</form>
+<br>
+<form  action="#" method="post" style="overflow-y:auto;">
+<table id="reader_tbl" title="Просмотр подробной информации">
+  <tr title="">
+    <th  class="id_book">id</th>
+	<th>Название книги</th>
+    <th>Автор</th>
+    <th>Жанр</th>
+	<th>Запрос книги</th>
+  </tr>
+  <tr>
+    <td class="id_book">1</td>
+    <td>Властелин колец</td>
+    <td>Джон Рональд Толкин</td>
+    <td>фэнтези</td>
+	<td>
+		<button type="submit" name="request">запросить</button>
+	</td>
+  </tr>
+  <tr>
+    <td class="id_book">2</td>
+    <td>Война и мир том1</td>
+    <td>Лев Николаевич Толстой</td>
+    <td>классика</td>
+	<td>
+		<button type="submit" name="request">запросить</button>
+	</td>
+  </tr>
+  <tr>
+    <td class="id_book">3</td>
+    <td>20 тысяч лье под водой</td>
+    <td>Жюль Верн</td>
+    <td>фантастика</td>
+	<td>
+		<button type="submit" name="request">запросить</button>
+	</td>
+  </tr>
+  <tr>
+    <td class="id_book">4</td>
+    <td>Евгений Онегин</td>
+    <td>Александр Сергеевич Пушкин</td>
+    <td>стихи</td>
+	<td>
+		<button type="submit" name="request">запросить</button>
+	</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

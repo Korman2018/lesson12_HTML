@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+	padding: 10px;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 7px;
+}
+
+
+
+.books_list  tr :hover {
+	background-color: #f2f2f2;
+	cursor:pointer;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+input[type=text], #select_authors {
+    width: 350px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 5px 10px 5px 20px;
+}
+
+.search_book, .active_requests  input {
+	margin: 5px 0px 5px 30px;
+}
+
+#book_id , .id_book , .id_user, .id_genre, .id_author {
+	display:none;
+}
+
+.form_buttons {
+	width: 200px;
+	height: 30px;
+}
+
+#add_book_div {
+	height: 50px;
+    left: 0; bottom: 0;
+    background: #39b54a;
+    width: 100%;
+   }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/tables.css" rel="stylesheet">
+	<link rel="import" href="../admin/admin_header.html">
+	<script src="../js/jquery-3.3.1.js"></script>
+<title>Информация о книге</title>
+</head>
+<body class="base_tables">
+<script>
+   var link = document.querySelector('link[rel=import]');
+   var content = link.import.querySelector('#admin_header');
+   document.body.appendChild(content.cloneNode(true));	 
+</script>
+<div class="register-box login-box">
+   
+<h1> Информация о книге</h1>
+    <form name="registerForm" action="#" method="post"> 
+		<input class="id_book" value="1" type="text" name="id_book" >	
+        <p>Название книги</p>
+        <input value="Властелин колец" type="text" name="book_title" placeholder="введите название">
+        <p>Автор</p>
+		<select size="1" id="select_authors" name="id_author">
+			<option selected value="1">Джон Рональд Толкин</option>
+			<option value="2">Жюль Верн</option>
+			<option value="3">Александр Сергеевич Пушкин</option>
+		</select>
+		<p>Жанр</p>
+        <input value="фэнтези" type="text" name="genre">
+		<br>
+		<br>
+        <input type="submit" name="submit" value="сохранить">
+    </form>
+</div>
+</body>
+</html>

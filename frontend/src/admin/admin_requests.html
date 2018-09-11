@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/tables.css" rel="stylesheet">
+	<link rel="import" href="../admin/admin_header.html">
+<title>Запросы читателя</title>
+</head>
+<body class="base_tables">
+
+<script>
+   var link = document.querySelector('link[rel=import]');
+   var content = link.import.querySelector('#admin_header');
+   document.body.appendChild(content.cloneNode(true));	 
+</script>
+<br>
+<form class="active_requests">
+  <!-- <form action=""> -->
+  <input type="radio" name="req" value="all" checked>&nbsp;&nbsp;все запросы   
+  <input type="radio" name="req" value="requested">&nbsp;&nbsp;запрошенные книги  
+  <input type="radio" name="req" value="issued">&nbsp;&nbsp;выданные книги  
+<p/>
+</form>
+<form class="book_request" action="#" method="post" style="overflow-y:auto;">
+<table id="reader_tbl">
+  <tr title="">
+    <th id="book_id">id</th>
+    <th>id пользователя</th>
+	<th>Название книги</th>
+    <th>Текущий статус</th>
+  </tr>
+  <tr>
+    <td class="id_book">1</td>
+    <td>1</td>
+    <td>Властелин колец</td>
+    <td>
+		<select size="1" class="statuses">
+			<option selected value="запрос">запрос</option>
+			<option value="обработано">обработано</option>
+			<option value="выдано">выдано</option>
+			<option value="возврат">возврат</option>
+		</select>
+	</td>
+  </tr>
+  <tr>
+    <td class="id_book">2</td>
+    <td>2</td>
+    <td>Война и мир том1</td>
+    <td>
+		<select size="1" class="statuses">
+			<option selected value="запрос">запрос</option>
+			<option value="обработано">обработано</option>
+			<option value="выдано">выдано</option>
+			<option value="возврат">возврат</option>
+		</select>
+	</td>
+  </tr>
+  <tr>
+    <td class="id_book">3</td>
+    <td>3</td>
+    <td>20 тысяч лье под водой</td>
+    <td>
+		<select size="1" class="statuses">
+			<option value="запрос">запрос</option>
+			<option selected value="обработано">обработано</option>
+			<option value="выдано">выдано</option>
+			<option value="возврат">возврат</option>
+		</select>
+	</td>
+  </tr>
+  <tr>
+    <td class="id_book">4</td>
+    <td>1</td>
+    <td>Евгений Онегин</td>
+    <td>
+		<select size="1" class="statuses">
+			<option selected value="запрос">запрос</option>
+			<option value="обработано">обработано</option>
+			<option selected value="выдано">выдано</option>
+			<option value="возврат">возврат</option>
+		</select>
+	</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

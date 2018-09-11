@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/tables.css" rel="stylesheet">
+	<link rel="import" href="../reader/reader_header.html">
+<title>Персональная информация</title>
+</head>
+<body class="base_tables">
+<script>
+   var link = document.querySelector('link[rel=import]');
+   var content = link.import.querySelector('#reader_header');
+   document.body.appendChild(content.cloneNode(true));	 
+</script>
+<div>
+<h2> Персональная информация</h2>
+    <form name="reader_info_form" action="#" method="post">    
+        <input class="id_user" value="1" type="text" name="id_user" >
+        <p>Фамилия</p>
+        <input value="Иванов" type="text" name="surname" placeholder="введите фамилию(RU)" required pattern="[А-Я]{1}[а-я]+">
+        <p>Имя</p>
+        <input value="Иван" type="text" name="name" placeholder="введите имя(RU)" required pattern="[А-Я]{1}[а-я]+">
+		<p>Отчество</p>
+        <input type="text" name="patronymic" placeholder="введите отчество (RU)" pattern="[А-Я]?[а-я]{0,}">
+		<p>Логин</p>
+        <input value="ivanov"  type="text" name="login" placeholder="введите логин (ENG,3-10 симв)" required pattern="[\w-]{3,10}$">
+        <p>Пароль</p>
+        <input type="password" name="password" placeholder="новый пароль" require pattern="(.){6,}">
+		<p>Пароль повторно</p>
+        <input type="password" name="passwordAgain" placeholder="новый пароль" require pattern="(.){6,}">
+        <br>
+		<br>
+        <input type="submit" name="submit" value="сохранить">
+    </form>
+</div>
+</body>
+</html>

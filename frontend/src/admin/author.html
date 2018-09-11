@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../css/tables.css" rel="stylesheet">
+	<link rel="import" href="../admin/admin_header.html">
+<title>Список авторов</title>
+</head>
+<body class="base_tables">
+<script>
+   var link = document.querySelector('link[rel=import]');
+   var content = link.import.querySelector('#admin_header');
+   document.body.appendChild(content.cloneNode(true));	 
+</script>
+<div id="add_book_div">
+<form name="add_book" action="#" method="post"> 
+<table id="add_book">
+  <tr title="">
+	<td>
+        <input type="text" name="author_surname" placeholder="введите фамилию">
+	</td>
+	<td>
+		<input type="text" name="author_name" placeholder="введите имя">
+	</td>
+	<td>
+		<input type="text" name="author_patrinymic" placeholder="введите отчество">
+	</td>
+	<td>
+		<input type="submit" name="submit" value="добавить автора" class="form_buttons">
+	</td>
+  </tr>
+</table>
+    </form>
+</div>
+<br>
+<form class="book_request" action="#" method="post" style="overflow-y:auto;">
+<table id="authors_tbl" title="Просмотр подробной информации">
+  <tr title="">
+    <th id="author_id">id автора</th>
+	<th>Фамилия</th>
+	<th>Имя</th>
+    <th>Отчество</th>
+  </tr>
+  <tr>
+    <td class="author_id">1</td>
+	<td><input type="text" name="surname" value="Толкин"></td>
+	<td><input type="text" name="name" value="Джон"></td>
+	<td><input type="text" name="patronymic" value="Рональд"></td>
+  </tr>
+  <tr>
+    <td class="author_id">2</td>
+	<td><input type="text" name="surname" value="Жюль"></td>
+	<td><input type="text" name="name" value="Верн"></td>
+	<td><input type="text" name="patronymic" value=""></td>
+  </tr>
+  <tr>
+    <td class="author_id">3</td>
+	<td><input type="text" name="surname" value="Толстой"></td>
+	<td><input type="text" name="name" value="Лев"></td>
+	<td><input type="text" name="patronymic" value="Николаевич"></td>
+  </tr>
+  <tr>
+   <td class="author_id">4</td>
+	<td><input type="text" name="surname" value="Пушкин"></td>
+	<td><input type="text" name="name" value="Александр"></td>
+	<td><input type="text" name="patronymic" value="Сергеевич"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
